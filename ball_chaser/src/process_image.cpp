@@ -56,13 +56,13 @@ class ProcessImage
           	//printf("************************"+std::string(direction)+"\n");
           	switch(direction)
             {
-              	case 0: drive_robot(0, 0.3);
+              	case 0: drive_robot(0, 0.5);
                 		moving = true;
                 		break;
-                case 1: drive_robot(0.4, 0);
+                case 1: drive_robot(0.5, 0);
                 		moving = true;
                 		break;
-                case 2: drive_robot(0, -0.3);
+                case 2: drive_robot(0, -0.5);
                 		moving = true;
                 		break;
               	default: if(moving)
