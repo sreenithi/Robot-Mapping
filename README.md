@@ -1,7 +1,7 @@
 # Ball-Chaser-Robot
 A simple robot modelled using URDF and programmed using ROS to move towards any white object that is placed in front of it.
 
-![Ball Chaser Demo](Ball_Chaser_Demo.gif)
+![Ball Chaser Demo](Ball-Chaser-Demo-new-robot.gif)
 
 The ROS project consists of 2 packages, **my_robot** and **ball_chaser**. The *my_robot* package contains the robot and world models which can be visualised in the Gazebo simulator when the package is run using the *roslaunch* command. The *ball_chaser* package is responsible for detecting and moving towards any white object in front of the robot by reading the feed from the camera attached to the front of the robot.
 
