@@ -32,37 +32,36 @@ class ProcessImage
   		void process_image_callback(const sensor_msgs::Image img)
         {
         	int white_pixel = 255;
-          	int one_third = (int) (img.width / 3);
+          	int one_third = (int) (img.step / 3);
           	int direction = -1; 
 
           
-          	for(int i = 0; i < img.height * img.step; i++)
+          	for(int i = 0; i < img.height * img.step; i+=3)
             {              
-              	if(img.data[i] == white_pixel)
+              	if((img.data[i] == white_pixel) && (img.data[i+1] == white_pixel) && (img.data[i+2] == white_pixel))
                 {
                     //to check if the ball is in the left, middle or right, 
                     //divide the image into 3 and check the white pixel number
                     //calculate and decide in which 'third' of the image the pixel falls
-                  	printf("White pixel number: %d\n",i);
-                  	if((i % img.width) < one_third)
+                  	if((i % img.step) < one_third)
                       	direction = 0;
-                    else if((i % img.width) < (one_third*2))
+                    else if((i % img.step) < (one_third*2))
                       	direction = 1;
                     else
                       	direction = 2;
                   	break;
                 }
             }
-          	//printf("************************"+std::string(direction)+"\n");
+          
           	switch(direction)
             {
-              	case 0: drive_robot(0, 0.25);
+              	case 0: drive_robot(0, 0.5);
                 		moving = true;
                 		break;
                 case 1: drive_robot(0.5, 0);
                 		moving = true;
                 		break;
-                case 2: drive_robot(0, -0.25);
+                case 2: drive_robot(0, -0.5);
                 		moving = true;
                 		break;
               	default: if(moving)
