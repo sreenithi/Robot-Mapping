@@ -2,12 +2,12 @@
 
 <launch>
 	<!-- Robot pose -->
-	<arg name="x" default="-2.3"/>
-    <arg name="y" default="1.4"/>
+	<arg name="x" default="3.3"/>
+    <arg name="y" default="-4.7"/>
     <arg name="z" default="0.1"/>
     <arg name="roll" default="0"/>
     <arg name="pitch" default="0"/>
-    <arg name="yaw" default="0"/>
+    <arg name="yaw" default="1.57"/>
 
 	<!-- World File -->
     <arg name="world_file" default="$(find my_robot)/worlds/sreenithi.world" />
