@@ -8,7 +8,7 @@ The generated map of the environment can be downloaded from this [Google Drive l
 To view the existing map dowloaded from the link in the database viewer, run the command<br>
 `rtabmap-databaseViewer (map db location)/rtabmap.db`
 
-The 3D model of the map can be viewed using the **Edit -> View 3D Map** from the *rtabmap-databaseViewer*. Alternatively the 3D Point Cloud Data file (.pcd file) can be downloaded from [this link](https://drive.google.com/file/d/1NeX4sXrIAHa1OLbSslMtU3VEx-wJEf4v/view?usp=sharing). Once downloaded it can be viewed using the *pcl_viewer*. 
+The 3D model of the map can be viewed using the **Edit -> View 3D Map** option from the *rtabmap-databaseViewer*. Alternatively the 3D Point Cloud Data file (.pcd file) can be downloaded from [this link](https://drive.google.com/file/d/1NeX4sXrIAHa1OLbSslMtU3VEx-wJEf4v/view?usp=sharing). Once downloaded it can be viewed using the *pcl_viewer*. The top and side views of the map are also available as .jpg files in the *mapping/db* folder.
 
 
 ## Nodes
